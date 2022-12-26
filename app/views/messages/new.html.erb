@@ -1,0 +1,17 @@
+<div id="dis">
+</div>
+
+<div id = "display-mess">
+<% Message.all.each do |m| %>
+<em><%= m.user.email %> </em>: <%= m.body %><br>
+<% end %>
+</div>
+
+<%= render "form", message: @message %>
+
+<br>
+
+<div>
+  <%= link_to "Back to messages", messages_path %>
+</div>
+

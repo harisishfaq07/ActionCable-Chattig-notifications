@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+<%= button_to "logout" , destroy_user_session_path , method: :delete %>
+<% end %>
+Hello <%= current_user.email %>
+<br>
+<%= link_to "Create Article" , new_article_path %> | <%= link_to "Create Book" , new_book_path %>  | <%= link_to "Chatroom" , new_message_path %>
